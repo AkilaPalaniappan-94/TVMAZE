@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ShowDetailsService } from '../show-details.service';
+import { IShowDetails } from '../ishow-details';
 
 @Component({
   selector: 'app-show-detail-component',
@@ -8,5 +10,8 @@ import { Component } from '@angular/core';
   styleUrl: './show-detail-component.component.css'
 })
 export class ShowDetailComponentComponent {
+
+
+  
 
 }

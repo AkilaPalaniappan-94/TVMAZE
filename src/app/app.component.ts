@@ -5,7 +5,7 @@ import { ShowDetailComponentComponent } from "./show-detail-component/show-detai
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ShowDetailComponentComponent],
+  imports: [ShowDetailComponentComponent,RouterOutlet],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

@@ -2,7 +2,7 @@ export interface IShowDetailsData {
     name:string,
     status:string,
     language:string,
-    runtime:string,
+    runtime:number,
     premiered:string,
     network:{
         name:string
