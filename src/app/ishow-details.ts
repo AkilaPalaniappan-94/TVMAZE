@@ -3,7 +3,7 @@ export interface IShowDetails {
     Network:string
     Language:string
     Rating:number
-    Time:number
-    AirDate:Date
+    Time:string
+    AirDate:string
     Status:string
 }
