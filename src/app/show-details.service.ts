@@ -11,10 +11,15 @@ import { map } from 'rxjs/operators';
 export class ShowDetailsService {
 
   constructor(private httpClient:HttpClient) { }
+
+  getShowDetails(name: string){
+    this.httpClient.get(`https://api.tvmaze.com//search/shows?q=${name}`)
+  }
   
   
   private transformToIShowDetails(data:IShowDetailsData):IShowDetails{
     return{
+      Name:data.name,
       NumEpisodes:data.runtime,
     Network:data.network.name,
     Language:data.language,
