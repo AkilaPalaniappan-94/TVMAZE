@@ -13,7 +13,7 @@ export class ShowDetailsService {
   constructor(private httpClient:HttpClient) { }
 
   getShowDetails(name: string){
-    this.httpClient.get(`https://api.tvmaze.com//search/shows?q=${name}`)
+    return this.httpClient.get<IShowDetailsData>(`https://api.tvmaze.com//search/shows?q=${name}`).pipe(map(data => this.transformToIShowDetails(data)))
   }
   
   
@@ -21,12 +21,12 @@ export class ShowDetailsService {
     return{
       Name:data.name,
       NumEpisodes:data.runtime,
-    Network:data.network.name,
-    Language:data.language,
-    Rating:data.rating.average,
-    Time:data.schedule.time,
-    AirDate:data.premiered,
-    Status:data.status
+      Network:data.network.name,
+      Language:data.language,
+      Rating:data.rating.average,
+      Time:data.schedule.time,
+      AirDate:data.premiered,
+      Status:data.status
     }
   }
 }
