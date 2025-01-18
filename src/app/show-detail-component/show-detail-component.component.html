@@ -1,25 +1,35 @@
+
 <div class="container">
 
-<div class="column">
-    <div style="background-color: aquamarine;">
-        <span style="text-transform: uppercase;"><h3>{{show.Name}}</h3></span>
+    <div class="row" id="main">
+        <h2>Search for Shows</h2>
+        <p>Show Search Component Goes Here</p>
     </div>
-    <div style="background-color: beige;">
-        Episodes: <span>{{show.NumEpisodes}}</span>
-        <br />
-        Network: <span>{{show.Network}}</span>
-        <br />
-        Language: <span> {{show.Language}}</span>
-        <br />
-        Rating: <span>{{show.Rating}}</span>
+
+<div class="row" id="">
+    <h2> Show Details</h2>
+    <div>
+        <h3>{{show.Name}}</h3>
+    </div>
+    <hr/>
+<div class="row">
+    <p>Episodes:{{show.NumEpisodes}}
+            <br/>
+        Network:{{show.Network}}
         <br/>
-        Time: <span>{{show.Time}}</span>
+        Language:{{show.Language}}
         <br />
-        <span>{{show.AirDate}}, {{show.Status}}</span>
+        Rating: {{show.Rating}}
+        <br />
+        Duration: {{show.Time}}
+            <br />
+        {{show.AirDate}}, {{show.Status}}
+    </p>
     </div> 
 
 </div>
-<div class="column">
+
+<div class="row" id="showPic">
     <img [src]="show.Image">
 </div>
 

@@ -1,13 +1,26 @@
 .container{
-    border: 1px solid black;
-  margin: 1rem;
-  padding: 2rem 2rem;
   text-align: center;
+  
 }
 
-.column {
-    display: inline-block;
-    border: 1px solid red;
-    padding: 1rem 1rem;
-    vertical-align: middle;
-  }
+h2{
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#showPic{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #d4ece2;
+  border-radius: 5px;
+
+}
+
+p{
+  line-height: 1.5;
+}
+
+img{
+  width: 50%;
+}

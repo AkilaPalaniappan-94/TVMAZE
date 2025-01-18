@@ -23,7 +23,7 @@ export class ShowDetailComponentComponent {
   }
 
   constructor(private showDetailsService:ShowDetailsService){
-    this.showDetailsService.getShowDetails("girls").subscribe(data=>this.show=data);
+    this.showDetailsService.getShowDetails("the simpsons").subscribe(data=>this.show=data);
 
   }
 
