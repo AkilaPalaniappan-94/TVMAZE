@@ -1,15 +1,27 @@
-<div>
-    <div>
-        <span>{{show.Name}},</span>
+<div class="container">
+
+<div class="column">
+    <div style="background-color: aquamarine;">
+        <span style="text-transform: uppercase;"><h3>{{show.Name}}</h3></span>
     </div>
-    <div>
-        <span>{{show.NumEpisodes}}, {{show.Network}}</span>
+    <div style="background-color: beige;">
+        Episodes: <span>{{show.NumEpisodes}}</span>
         <br />
-        <span>{{show.Network}}, {{show.Language}}</span>
+        Network: <span>{{show.Network}}</span>
         <br />
-        <span>{{show.Rating}}, {{show.Time}}</span>
+        Language: <span> {{show.Language}}</span>
+        <br />
+        Rating: <span>{{show.Rating}}</span>
+        <br/>
+        Time: <span>{{show.Time}}</span>
         <br />
         <span>{{show.AirDate}}, {{show.Status}}</span>
     </div> 
 
 </div>
+<div class="column">
+    <img [src]="show.Image">
+</div>
+
+</div>
+

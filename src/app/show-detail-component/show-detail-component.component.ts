@@ -11,14 +11,20 @@ import { IShowDetails } from '../ishow-details';
 })
 export class ShowDetailComponentComponent {
   show:IShowDetails = {
-    Name: "King of the Hill",
-    NumEpisodes: 138,
-    Network:"Fox",
-    Language: "EN ",
-    Rating: 7.5,
-    Time:"8PM C",
-    AirDate: "Dec 1999",
-    Status:"Canceled"
+    Name: "",
+    NumEpisodes: 0,
+    Network:"",
+    Language: "",
+    Rating: 0,
+    Time:"",
+    AirDate: "",
+    Status:"",
+    Image:""
+  }
+
+  constructor(private showDetailsService:ShowDetailsService){
+    this.showDetailsService.getShowDetails("girls").subscribe(data=>this.show=data);
+
   }
 
 

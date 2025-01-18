@@ -7,4 +7,5 @@ export interface IShowDetails {
     Time:string
     AirDate:string
     Status:string
+    Image:string
 }

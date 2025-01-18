@@ -13,6 +13,9 @@ export interface IShowDetailsData {
     schedule:{
         time:string
     }
+    image:{
+        medium:string
+    }
 
 
 }
