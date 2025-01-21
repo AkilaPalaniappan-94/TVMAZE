@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { ShowDetailsService } from '../show-details.service';
 import { IShowDetails } from '../ishow-details';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
 
 @Component({
   selector: 'app-show-detail-component',
   standalone: true,
-  imports: [],
+  imports: [MatCardModule, MatButtonModule],
   templateUrl: './show-detail-component.component.html',
   styleUrl: './show-detail-component.component.css'
 })

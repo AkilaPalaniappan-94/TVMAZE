@@ -5,33 +5,32 @@
         <h2>Search for Shows</h2>
         <p>Show Search Component Goes Here</p>
     </div> -->
-
-<div class="row" id="">
-    <h2> Show Details</h2>
-    <div>
-        <h3>{{show.Name}}</h3>
-    </div>
-    <hr/>
-<div class="row">
-    <p>Episodes:{{show.NumEpisodes}}
-            <br/>
-        Network:{{show.Network}}
+    <mat-card appearance="outlined">
+            <h2>{{show.Name}}</h2>
+          <p> Network:{{show.Network}}</p>
+        <div class="row" id="showPic">
+            <img [src]="show.Image">
+        </div>
         <br/>
-        Language:{{show.Language}}
-        <br />
-        Rating: {{show.Rating}}
-        <br />
-        Duration: {{show.Time}}
+        <mat-card-content>
+            <h3>Show Details</h3>
+            <p>Episodes:{{show.NumEpisodes}}
+                <br/>
+        
+            Language:{{show.Language}}
             <br />
-        {{show.AirDate}}, {{show.Status}}
-    </p>
-    </div> 
+            Rating: {{show.Rating}}
+            <br />
+            Duration: {{show.Time}}
+                <br />
+            {{show.AirDate}}, {{show.Status}}
+        </p>
+        </mat-card-content>
+        </mat-card>
+   
 
-</div>
 
-<div class="row" id="showPic">
-    <img [src]="show.Image">
-</div>
 
-</div>
+    
+
 

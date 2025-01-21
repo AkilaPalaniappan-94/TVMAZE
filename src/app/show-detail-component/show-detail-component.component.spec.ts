@@ -3,6 +3,7 @@ import { ShowDetailComponentComponent } from './show-detail-component.component'
 
 
 
+
 describe('ShowDetailComponentComponent', () => {
   let component: ShowDetailComponentComponent;
   let fixture: ComponentFixture<ShowDetailComponentComponent>;
