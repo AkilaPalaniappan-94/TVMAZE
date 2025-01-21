@@ -1,1 +1,11 @@
-<p>show-search works!</p>
+<form>
+    <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Show Title</mat-label>
+          <input matInput placeholder="Show Name" [formControl]="search">
+          <mat-error *ngIf="search.invalid">Enter more than three characters</mat-error>
+          <mat-icon matSuffix>search</mat-icon>
+          <mat-hint>Enter Show Name</mat-hint>
+        </mat-form-field>
+      </p>
+</form>
