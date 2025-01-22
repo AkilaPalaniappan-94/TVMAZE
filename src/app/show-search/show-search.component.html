@@ -1,6 +1,7 @@
+
 <form>
     <p>
-        <mat-form-field appearance="fill">
+        <mat-form-field appearance="fill" style="width: 100%;">
           <mat-label>Show Title</mat-label>
           <input matInput placeholder="Show Name" [formControl]="search">
           <mat-error *ngIf="search.invalid">Enter more than three characters</mat-error>
