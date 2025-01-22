@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { ShowDetailsService } from '../show-details.service';
+import { Component, Input } from '@angular/core';
 import { IShowDetails } from '../ishow-details';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
@@ -12,7 +11,7 @@ import {MatCardModule} from '@angular/material/card';
   styleUrl: './show-detail-component.component.css'
 })
 export class ShowDetailComponentComponent {
-  show:IShowDetails = {
+  @Input() show:IShowDetails = {  
     Name: "",
     NumEpisodes: 0,
     Network:"",
@@ -23,13 +22,4 @@ export class ShowDetailComponentComponent {
     Status:"",
     Image:""
   }
-
-  constructor(private showDetailsService:ShowDetailsService){
-    this.showDetailsService.getShowDetails("the simpsons").subscribe(data=>this.show=data);
-
-  }
-
-
-  
-
 }

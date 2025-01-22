@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatIconModule} from '@angular/material/icon';
@@ -15,12 +15,13 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class ShowSearchComponent {
 
-  search=new FormControl('',[Validators.minLength(3),Validators.maxLength(20)]);
+  search=new FormControl('',[Validators.minLength(3),Validators.maxLength(20)])
+  @Output() searchEvent = new EventEmitter<string>();
 
   constructor(){
     this.search.valueChanges.pipe(debounceTime(1000)).subscribe(searchValue =>{
-      if(!this.search.invalid){
-
+      if(!this.search.invalid){ 
+        this.searchEvent.emit(searchValue??undefined)
       }
     })
   }

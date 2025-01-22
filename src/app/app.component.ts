@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { ShowDetailComponentComponent } from "./show-detail-component/show-detail-component.component";
 import { ShowSearchComponent } from './show-search/show-search.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ShowDetailsService } from './show-details.service';
+import { IShowDetails } from './ishow-details';
 
 @Component({
   selector: 'app-root',
@@ -13,4 +15,22 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 })
 export class AppComponent {
   title = 'tv-maze-app';
+  showDetail : IShowDetails = {
+    Name: "",
+    NumEpisodes: 0,
+    Network:"",
+    Language: "",
+    Rating: 0,
+    Time:"",
+    AirDate: "",
+    Status:"",
+    Image:""
+  }
+
+  constructor(private showDetailsService:ShowDetailsService){}
+  doSearch(searchValue : string){
+    const userInput = searchValue
+    this.showDetailsService.getShowDetails(userInput).subscribe(data=>this.showDetail=data);
+
+  }
 }
