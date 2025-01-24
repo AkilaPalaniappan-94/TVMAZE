@@ -1,40 +1,9 @@
-
-<div class="container">
-
-    <div *ngIf="show.Name===''">No Data Available</div>
-
-    <!-- <div class="row" id="main">
-        <h2>Search for Shows</h2>
-        <p>Show Search Component Goes Here</p>
-    </div> -->
-
-    <div *ngIf="show.Name !==''">
-    <mat-card appearance="outlined" >
-            <h2>{{show.Name}}</h2>
-          <p> Network:{{show.Network}}</p>
-        <div class="row" id="showPic">
-            <img [src]="show.Image">
-        </div>
-        <br/>
-        <mat-card-content>
-            <h3>Show Details</h3>
-            <p>Episodes:{{show.NumEpisodes}}
-                <br/>
-        
-            Language:{{show.Language}}
-            <br />
-            Rating: {{show.Rating}}
-            <br />
-            Duration: {{show.Time}}
-                <br />
-            {{show.AirDate}}, {{show.Status}}
-        </p>
-        </mat-card-content>
-        </mat-card>
-    </div>
+<div><ul *ngFor="let s of show">
+    <li>{{s.Name}}</li>
+</ul></div>
 
 
 
-    
+
 
 

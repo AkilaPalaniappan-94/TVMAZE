@@ -15,22 +15,18 @@ import { IShowDetails } from './ishow-details';
 })
 export class AppComponent {
   title = 'tv-maze-app';
-  showDetail : IShowDetails = {
-    Name: "",
-    NumEpisodes: 0,
-    Network:"",
-    Language: "",
-    Rating: 0,
-    Time:"",
-    AirDate: "",
-    Status:"",
-    Image:""
-  }
+  showDetail : IShowDetails []=[];
 
   constructor(private showDetailsService:ShowDetailsService){}
   doSearch(searchValue : string){
     const userInput = searchValue
-    this.showDetailsService.getShowDetails(userInput).subscribe(data=>this.showDetail=data);
+    this.showDetailsService.getShows(userInput).subscribe(data=>{
+      
+      this.showDetail=data
+    }
+    );
+    
 
   }
+  
 }

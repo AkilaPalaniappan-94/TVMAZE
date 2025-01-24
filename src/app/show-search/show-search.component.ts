@@ -21,7 +21,8 @@ export class ShowSearchComponent {
   constructor(){
     this.search.valueChanges.pipe(debounceTime(1000)).subscribe(searchValue =>{
       if(!this.search.invalid){ 
-        this.searchEvent.emit(searchValue??undefined)
+        this.searchEvent.emit(searchValue??undefined);
+        console.log(this.search);
       }
     })
   }
