@@ -32,17 +32,34 @@ export class ShowDetailsService {
         
       );
   }
+
+
+  private isNull(item:any) {
+    let notNull;
+    return (notNull = item ? item.name : null);
+  }
   
+  private getImg(image:any){
+    let img:string;
+    return (img= image? image.medium :'http://static.tvmaze.com/images/no-img/no-img-portrait-text.png')
+  }
   
   private transformToIShowDetails(data:IShowDetailsData):IShowDetails{
     
-    console.log("in transform");
-    console.log(data.runtime);
+    
+    
     
     return{
      
       Name:data.show.name,
-      NumEpisodes:data.runtime,
+      NumEpisodes:data.show.runtime,
+      Network:this.isNull(data.show.network),
+      Language:data.show.language,
+      Rating:data.show.rating.average,
+      Time:data.show.schedule.time,
+      AirDate:data.show.premiered,
+      Status:data.show.status,
+      Image:this.getImg(data.show.image)
       
       
     }
