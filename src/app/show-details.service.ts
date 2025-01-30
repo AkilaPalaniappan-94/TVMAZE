@@ -23,9 +23,11 @@ export class ShowDetailsService {
       )
       .pipe(
         map((data) => {
-          
+          console.log("data");
+          console.log(data)
           return data.map((show) => {
-           
+           console.log("show")
+           console.log(show)
             return this.transformToIShowDetails(show);
           });
         })

@@ -15,7 +15,17 @@ import { IShowDetails } from './ishow-details';
 })
 export class AppComponent {
   title = 'tv-maze-app';
-  showDetail : IShowDetails []=[];
+  showDetail : IShowDetails []=[{
+    Name: "",
+    NumEpisodes: 0,
+    Network:"",
+    Language: "",
+    Rating: 0,
+    Time:"",
+    AirDate: "",
+    Status:"",
+    Image:""
+  }];
 
   constructor(private showDetailsService:ShowDetailsService){}
   doSearch(searchValue : string){

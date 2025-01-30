@@ -12,7 +12,17 @@ import { CommonModule } from '@angular/common';
   styleUrl: './show-detail-component.component.css'
 })
 export class ShowDetailComponentComponent {
-  @Input() show:IShowDetails[]=[];
+  @Input() show:IShowDetails[]=[{
+    Name: "",
+    NumEpisodes: 0,
+    Network:"",
+    Language: "",
+    Rating: 0,
+    Time:"",
+    AirDate: "",
+    Status:"",
+    Image:""
+  }];
 
   
 }
